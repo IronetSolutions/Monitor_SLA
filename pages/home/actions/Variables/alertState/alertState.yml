@@ -1,0 +1,16 @@
+id: '17278525697980.7746861770702491'
+kind: store_item
+name: alertState
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: false
+  valueType: boolean
+  initialValue: false
+  version: 1
+selected: true
+configured: true

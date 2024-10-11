@@ -1,0 +1,127 @@
+id: '17285076137430.8697274072739456'
+name: requestAddNotas
+nameConfigured: true
+steps:
+  - id: '17285076137430.010418941110073687'
+    type: httpRequest
+    name: request
+    params:
+      - type: datasourceId
+        value: backend
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: /api_gateway/add_notas/
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: Content-Type
+                value: multipart/form-data
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: ''
+                value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value:
+          - name: ttorigen
+            value: '{{state.linea_seleccionada.task_id}}'
+            type: text
+          - name: user
+            value: '{{user.email}}'
+            type: text
+          - name: nota
+            value: '{{ui.textArea_nota.value}}'
+            type: text
+          - name: sincro
+            value: '{{ui.sincro_padres_hijos.value?"SI":"NO"}}'
+            type: text
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: formData
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17285076137430.7358326168383407'
+    type: condition
+    name: condition
+    params:
+      - type: code
+        value: ./condition.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17285076137430.07567151527152371'
+                type: customAsyncCode
+                name: code
+                params:
+                  - type: asyncCode
+                    value: ./code.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                level: 1
+                fallthroughError: false
+                isChanged: true
+          - condition: false
+            steps: []
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+singleStep: false
+mode: manual
+modeConfigured: false
+parentId: '17285076018900.27790364873647766'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.requestAddNotas.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.requestAddNotas.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.requestAddNotas.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: true
+assigned: true
+kind: workflow
+selected: true
+parentPageId: '1'

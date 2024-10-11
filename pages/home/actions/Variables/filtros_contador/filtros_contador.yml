@@ -1,0 +1,34 @@
+id: '17277708570370.3482642172859345'
+kind: store_item
+name: filtros_contador
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: |-
+    {
+      nombre_sla: [],
+      zona: [],
+      provincia: [],
+      status: [],
+      prioridad: [],
+      sla_vencido: true,
+      estado_sla: ["activo"]
+    }
+  valueType: object
+  initialValue: |-
+    {
+      nombre_sla: [],
+      zona: [],
+      provincia: [],
+      status: [],
+      prioridad: [],
+      sla_vencido: true,
+      estado_sla: ["activo"]
+    }
+  version: 1
+selected: true
+configured: true

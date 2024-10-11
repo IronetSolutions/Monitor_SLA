@@ -1,0 +1,78 @@
+id: '17267510132330.8564963844475335'
+kind: workflow
+name: auto_actualiza_datos
+nameConfigured: true
+steps:
+  - id: '17267510181120.10274200516351595'
+    type: interval
+    name: interval
+    params:
+      - type: interval
+        value: '300000'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: stopWhen
+        value: ./interval.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: skipNext
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17267510520670.32896064745004017'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17267513508050.7577681592182204'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.auto_actualiza_datos.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.auto_actualiza_datos.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.auto_actualiza_datos.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: false
+  preserveStateOnPageChange: false
+  autoTrigger: false
+  defaultParams: ''
+selected: true
+configured: true
+actions:
+  success: []
+  error: []
+defaultParams: ''

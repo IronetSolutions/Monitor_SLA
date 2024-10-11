@@ -1,0 +1,116 @@
+id: '17267675634220.9091299089134555'
+kind: workflow
+name: slas_definidos
+nameConfigured: true
+steps:
+  - id: '17268135584520.15263766393408984'
+    type: httpRequest
+    name: request
+    params:
+      - type: datasourceId
+        value: Backend_Local
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: /auto_api/GetList
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer {{actions.UserData.data[0].token_usr}}
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: ''
+                value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: |-
+          {
+            "limit": 50,
+            "offset": 0,
+            "order_colum": "",
+            "sort": "ASC",
+            "nombre_sla": "",
+            "sla_id": 0,
+            "interface_ID" : "GetList_Definicion_SLAs|773bacc0-4e87-4c4d-9b00-18d4ba9ba03a"
+          }
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value: []
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: object
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17271630856020.5034982088775646'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17271630131230.1627827294942903'
+        valueType: string
+      - type: value
+        value: '{{data.datos}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17267675212260.09779999162443698'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.slas_definidos.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.slas_definidos.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: '{{actions.slas_definidos.error.Error}}'
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+  autoTrigger: false
+  defaultParams: ''
+selected: true
+configured: true
+defaultParams: ''

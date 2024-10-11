@@ -1,0 +1,18 @@
+id: '17271620278270.08475138715063424'
+definitionId: view
+styles: {}
+properties:
+  name: view_13
+  viewName: view_1
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+parentSlotId: '17271620278270.6167661410681986'
+index: 0
+slots:
+  - id: '17271620278270.02759827958671046'
+    name: content
+    children:
+      - metric.yml
+      - metric2.yml
+      - metric4.yml

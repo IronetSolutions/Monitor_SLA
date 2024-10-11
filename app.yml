@@ -1,0 +1,27 @@
+metadata:
+  favicon: ''
+  title: Monitor SLAs VANTAGE
+  description: ''
+  breakpoints: []
+  rendererCachingEnabled: false
+  skipDepsComparisonInCompilerCache: false
+appSettings:
+  properties:
+    defaultData: '{}'
+  actions:
+    appLoad:
+      - action: '17265930896470.734105909342732'
+        paramCode: ''
+        blockPageLoad: true
+        preventDefault: false
+        index: 0
+      - action: '17267514542550.015677462502909467'
+        paramCode: ''
+        blockPageLoad: false
+        preventDefault: false
+        index: 1
+    pageLoad: []
+    appData: []
+  gridVersion: 2
+  density: compact
+internalType: project

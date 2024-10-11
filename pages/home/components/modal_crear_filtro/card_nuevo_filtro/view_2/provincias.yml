@@ -1,0 +1,85 @@
+id: '17284725822260.7991917813025433'
+definitionId: selectWithAtomics
+parentSlotId: '17277947528050.21403884556393882'
+styles:
+  xl:
+    gridItem:
+      x: 10
+      y: 56
+      w: 11
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 72
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  options:
+    value:
+      - value: option_1
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '1'
+      - value: option_2
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '2'
+    dataValue: '{{actions.UserData.data[0].prov_flujos}}'
+    withData: true
+  name: provincias
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  optionValueKey: tipo
+  showLoading:
+    withData: true
+    dataValue: '{{actions.UserData.loading}}'
+    value: false
+  labelConfig:
+    text: Provincia
+    position: horizontal
+    align: left
+  disabled:
+    value: false
+    dataValue: "if({{ui.zonas.value.length >= 1}}){\n\treturn true\n}else return false"
+    withData: true
+  value: '{{actions.UserData.data[0].prov_flujos}}'
+  multi: true
+actions:
+  selectChange: []
+  validate: []
+  focusEvent: []
+  blurEvent: []
+  init: []
+slots:
+  - id: '17284725822260.8107907694902254'
+    name: optionViewTypes
+    children:
+      - id: '17284729739850.18291553536099392'
+        definitionId: atomicString
+        parentSlotId: '17284725822260.8107907694902254'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString65
+          prop: tipo
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []

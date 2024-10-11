@@ -1,0 +1,53 @@
+id: '17284742872210.5236720747037107'
+definitionId: tags
+parentSlotId: '17268195483280.13458659909216486'
+styles:
+  xl:
+    gridItem:
+      x: 4
+      y: 44
+      w: 19
+      h: 7
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 28
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 103
+      w: 24
+      h: 7
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 28
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  value:
+    value:
+      - value: active
+        color: success
+        __UIBAKERY__SYSTEM_ID__: '1'
+      - value: not_active
+        color: danger
+        __UIBAKERY__SYSTEM_ID__: '2'
+    dataValue: "if({{state.filtros_aplicar.provincia}}.length >= 1){\n\treturn {{state.filtros_aplicar.provincia}}\n}else return \"TODAS\""
+    withData: true
+  name: tags_provincias
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  alignment: left
+  appearance:
+    value: filled
+    dataValue: outline
+    withData: false
+  verticalAlignment: middle
+actions: {}
+slots: []

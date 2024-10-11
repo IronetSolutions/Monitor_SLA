@@ -1,0 +1,53 @@
+id: '17270808406810.9952515082468247'
+definitionId: button
+parentSlotId: '17270808111900.4620462756335091'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 57
+      w: 12
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    iconPlacement: left
+  xs:
+    gridItem:
+      x: 0
+      y: 27
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: btn_aplicar_semaforo
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  text: Aplicar Semáforo
+  icon:
+    value: arrow-right
+    dataValue: star-outline
+    withData: false
+actions:
+  buttonClick:
+    - action: '17267557750670.6286762770161851'
+      paramCode: |-
+        {
+          type: 'recalcular_semaforo'
+        }
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+slots: []

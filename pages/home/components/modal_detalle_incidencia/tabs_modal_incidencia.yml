@@ -1,0 +1,68 @@
+id: '17274243942660.42895425190910363'
+definitionId: tabsButtons
+parentSlotId: '17266486888420.9332387628589591'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 1
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 160
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: tabs_modal_incidencia
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  tabs:
+    value:
+      - title: Detalle
+        visible: 'true'
+        disable: ''
+        __UIBAKERY__SYSTEM_ID__: '2'
+      - title: SLAs asociados
+        visible: 'true'
+        disable: ''
+        __UIBAKERY__SYSTEM_ID__: '1'
+      - title: Notificar
+        icon: ''
+        visible: 'true'
+        disable: ''
+        __UIBAKERY__SYSTEM_ID__: '17280344006020.5289655140758915'
+    dataValue: |-
+      [
+        { title: 'Tab 1', visible: true, disabled: false },
+        { title: 'Tab 2', icon: 'star', visible: true },
+      ]
+    withData: false
+actions:
+  init: []
+  tabsChangeTab:
+    - action: '17266487430120.5064280841600912'
+      paramCode: |-
+        {
+          type: 'select_tab_incidencia'
+        }
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+slots: []

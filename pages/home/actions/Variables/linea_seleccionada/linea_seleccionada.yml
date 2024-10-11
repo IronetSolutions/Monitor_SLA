@@ -1,0 +1,16 @@
+id: '17277213898310.5438092149653329'
+kind: store_item
+name: linea_seleccionada
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: '{}'
+  valueType: object
+  initialValue: '{}'
+  version: 1
+selected: true
+configured: true

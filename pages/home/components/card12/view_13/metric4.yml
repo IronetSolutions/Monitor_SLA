@@ -1,0 +1,98 @@
+id: '17271621010250.15336796051795232'
+definitionId: metric
+parentSlotId: '17271620278270.02759827958671046'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 28
+      w: 24
+      h: 25
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 84
+      w: 24
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{ui.querySlasTable.selectedRow.data}}'
+  name: metric4
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Título - Incidencia
+  operation: sum
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: 'false'
+    value: false
+actions: {}
+slots:
+  - id: '17271621010250.12181286371249267'
+    name: metricField
+    children:
+      - id: '17271621010470.1552233654459212'
+        definitionId: atomicString
+        parentSlotId: '17271621010250.12181286371249267'
+        styles:
+          xl:
+            fontSizeOverride:
+              customValue: 1
+              customUnit: rem
+              themeDefaultOverridePropertyKey: metricMainFontSize
+        properties:
+          name: atomicString4
+          prop: nombre_sla
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 264
+          widthMode: fixed
+          filter: true
+          textStyle:
+            transform: none
+            styles: []
+          title: Nombre SLA
+          labelConfig:
+            align: left
+            position: vertical
+        index: 0
+        slots: []
+  - id: '17271621010250.7800573109961282'
+    name: additionalField
+    children:
+      - id: '17271623429590.14953896422487833'
+        definitionId: atomicString
+        parentSlotId: '17271621010250.7800573109961282'
+        styles: {}
+        properties:
+          name: atomicString66
+          prop: task_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          textStyle:
+            transform: none
+            styles:
+              - bold
+        index: 0
+        slots: []
+  - id: '17271621010480.9903155713217988'
+    name: groupByField
+    children: []

@@ -1,0 +1,103 @@
+id: '17271613103660.16454744533105248'
+definitionId: metric
+parentSlotId: '17271620278270.02759827958671046'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 0
+      w: 12
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17271613103660.16454744533105248'
+      x: 15
+      y: 28
+      w: 9
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{ui.querySlasTable.selectedRow.data}}'
+  name: metric2
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Site
+  operation: show_last
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: 'false'
+    value: false
+actions: {}
+slots:
+  - id: '17271613103660.16579360732119564'
+    name: metricField
+    children:
+      - id: '17271613104070.023750216394482937'
+        definitionId: atomicString
+        parentSlotId: '17271613103660.16579360732119564'
+        styles:
+          xl:
+            fontSizeOverride:
+              customValue: 1
+              customUnit: rem
+              themeDefaultOverridePropertyKey: metricMainFontSize
+        properties:
+          name: atomicString34
+          prop: site_id
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+          textStyle:
+            transform: none
+            styles: []
+          labelConfig:
+            align: left
+            position: vertical
+        index: 0
+        slots: []
+  - id: '17271613103660.5936003437246469'
+    name: additionalField
+    children:
+      - id: '17271613104070.830532543327722'
+        definitionId: atomicString
+        parentSlotId: '17271613103660.5936003437246469'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString39
+          prop: site_name
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          textStyle:
+            transform: none
+            styles:
+              - bold
+          labelConfig:
+            align: left
+            position: vertical
+        index: 1
+        slots: []
+  - id: '17271613104090.011885327603124551'
+    name: groupByField
+    children: []

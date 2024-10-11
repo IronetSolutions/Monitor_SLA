@@ -1,0 +1,51 @@
+id: '17278467397350.001988399598989332'
+definitionId: numberEdit
+parentSlotId: '17277947528050.21403884556393882'
+styles:
+  xl:
+    gridItem:
+      x: 14
+      y: 6
+      w: 7
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17278467397350.001988399598989332'
+      x: 14
+      y: 63
+      w: 7
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: id_filtro
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelConfig:
+    text: ID
+    position: horizontal
+    align: left
+  disabled:
+    value: false
+    dataValue: 'true'
+    withData: true
+  __UIBAKERY__SHOW__CONDITION__CODE__: "if({{state.modo_modal_filtro == \"nuevo\"}}){\n\treturn false\n}\nif({{state.modo_modal_filtro == \"editar\"}}){\n\treturn true\n}"
+  __UIBAKERY__SHOW__CONDITION__PRESERVE__:
+    value: true
+    dataValue: 'false'
+    withData: false
+actions: {}
+slots: []

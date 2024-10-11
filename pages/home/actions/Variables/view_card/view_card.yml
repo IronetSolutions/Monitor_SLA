@@ -1,0 +1,16 @@
+id: '17266688397150.7652694462989389'
+kind: store_item
+name: view_card
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: ''
+  valueType: string
+  initialValue: ''
+  version: 1
+selected: true
+configured: true

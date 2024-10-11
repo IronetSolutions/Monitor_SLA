@@ -1,0 +1,166 @@
+id: '17284854689650.21140398691561613'
+kind: server_workflow
+name: email
+nameConfigured: true
+steps:
+  - id: '17284875583680.6349867481415175'
+    type: httpRequest
+    name: GetTask
+    params:
+      - type: datasourceId
+        value: Backend_Local
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: /auto_api/Get
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer {{params.token}}
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: ''
+                value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: |-
+          {
+            "provincias":[],
+            "tareas": [],
+            "task_id": {{params.tarea}},
+            "interface_ID" : "Get_Tarea_Main|6b3f72e9-2ee4-4b80-9127-9b6fcefd7353"
+          }
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value: []
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: object
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+    nameConfigured: true
+  - id: '17284854947800.12088970427870072'
+    type: smtpRequest
+    name: smtpRequest
+    params:
+      - type: datasourceId
+        value: EmailEulen
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+      - type: from
+        value: notify.wfm.fauno@eulen.com
+        valueType: interpolatedValue
+      - type: to
+        value: '{{steps.GetTask.data.datos.email}}'
+        valueType: interpolatedValue
+      - type: replyTo
+        value: ''
+        valueType: interpolatedValue
+      - type: cc
+        value: ''
+        valueType: interpolatedValue
+      - type: bcc
+        value: ''
+        valueType: interpolatedValue
+      - type: subject
+        value: Monitor SLAs FAUNO - NO RESPONDER
+        valueType: interpolatedValue
+      - type: text
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: html
+        value: >
+          <p>Correo de notificación desde Monitor SLAs, enviado por
+          <strong>{{params.login}}</strong>, para avisar de que la tarea
+          <strong>{{steps.GetTask.data.datos.task_id}}</strong> sobre el site
+          <strong>{{steps.GetTask.data.datos.site_name}}</strong> con título
+          <strong>{{steps.GetTask.data.datos.title}}</strong>, está a punto de
+          vencer.</p>
+
+
+          <p><strong>MENSAJE -></strong> <strong>{{params.mensaje}}</strong></p>
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: attachments
+        value: ''
+        valueType: interpolatedValue
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17284794575070.16580636111585778'
+defaultParams: return {{params}};
+automation:
+  workflowId: '17284854689650.499183454845995'
+  key: ''
+  cron: ''
+  cronEnabled: false
+  webhookEnabled: false
+  timezone: UTC
+  notificationEnabled: false
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.email.name}}"?
+  showSuccessToast: true
+  successToast: >-
+    Se ha enviado notificación via email al técnico que está trabajando en la
+    incidencia
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.email.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+  autoTrigger: false
+  defaultParams: return {{params}};
+selected: false
+configured: true

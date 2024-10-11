@@ -1,0 +1,49 @@
+id: '17270829834040.8452062162478302'
+kind: workflow
+name: notificacion
+nameConfigured: true
+steps:
+  - id: '17270829927930.26858347967469975'
+    type: showToast
+    name: notification
+    params:
+      - type: message
+        value: '{{params.message}}'
+        valueType: interpolatedValue
+      - type: type
+        value: primary
+        valueType: string
+      - type: icon
+        value: checkmark-circle-2
+        valueType: string
+      - type: duration
+        value: '4000'
+        valueType: interpolatedValue
+      - type: position
+        value: top-end
+        valueType: string
+      - type: hideOnClick
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.notificacion.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.notificacion.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.notificacion.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: true
+selected: true
+configured: true

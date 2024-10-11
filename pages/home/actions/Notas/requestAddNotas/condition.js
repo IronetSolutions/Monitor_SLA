@@ -1,0 +1,1 @@
+if({{data.message}}=="OK"){return true} else {return flase}

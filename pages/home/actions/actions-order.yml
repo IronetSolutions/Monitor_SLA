@@ -1,0 +1,17 @@
+- query_vista_interfaz
+- query_vista_interfaz_count
+- CargarDatos
+- semaforo
+- recarga_datos
+- auto_actualiza_datos
+- GetTask
+- lanza_contadores
+- loadSLAs_task
+- JS_acciones
+- Variables
+- Datos_auxiliares
+- Mapa
+- Filtros-Config
+- Metricas
+- Notificar
+- Notas

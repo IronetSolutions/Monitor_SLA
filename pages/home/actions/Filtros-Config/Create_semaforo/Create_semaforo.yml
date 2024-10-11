@@ -1,0 +1,109 @@
+id: '17274337064550.5485131555069545'
+kind: workflow
+name: Create_semaforo
+nameConfigured: true
+steps:
+  - id: '17274338057320.9950246192877197'
+    type: httpRequest
+    name: request
+    params:
+      - type: datasourceId
+        value: Backend_Local
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: /auto_api/Create
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer {{actions.UserData.data[0].token_usr}}
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: ''
+                value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: |-
+          {
+            "interface_ID": "Create_Semaforo|691ca89a-1ddb-49cb-9e98-6f174fc8646f",
+            "nombre_semaforo": {{ui.nombre_semaforo.value}},
+            "rojo_bajo": 0,
+            "rojo_alto": {{ui.rojo.value}},
+            "ambar_bajo": {{ui.rojo.value}},
+            "ambar_alto": {{ui.ambar.value}},
+            "verde_bajo": {{ui.ambar.value}},
+            "verde_alto": {{ui.verde.value}},
+            "username": {{user.email}}
+          }
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value: []
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: object
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17274358971660.32122034333523786'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17271003708150.12862494871751662'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.Create_semaforo.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.Create_semaforo.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.Create_semaforo.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

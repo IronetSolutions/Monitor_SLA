@@ -1,0 +1,16 @@
+id: '17267557585340.8555999385122648'
+kind: store_item
+name: incidencias_verde
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: 0
+  valueType: number
+  initialValue: 0
+  version: 1
+selected: false
+configured: true

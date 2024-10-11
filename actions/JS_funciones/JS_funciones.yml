@@ -1,0 +1,66 @@
+id: '17271192835030.4184336514041378'
+kind: js_file
+name: JS_funciones
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentId: null
+jsFile:
+  declarations:
+    - type: function
+      name: toLocalDate
+      start: 54
+      end: 120
+      params:
+        - date
+      loc:
+        start:
+          line: 3
+          column: 0
+        end:
+          line: 5
+          column: 1
+    - type: function
+      name: toMysqlDate
+      start: 122
+      end: 212
+      params:
+        - date
+      loc:
+        start:
+          line: 7
+          column: 0
+        end:
+          line: 9
+          column: 1
+    - type: function
+      name: redondearNumero
+      start: 214
+      end: 286
+      params:
+        - num
+      loc:
+        start:
+          line: 11
+          column: 0
+        end:
+          line: 13
+          column: 1
+    - type: function
+      name: calcularPorcentaje
+      start: 287
+      end: 379
+      params:
+        - parte
+        - total
+      loc:
+        start:
+          line: 14
+          column: 0
+        end:
+          line: 16
+          column: 1
+  valid: true
+selected: false
+configured: true

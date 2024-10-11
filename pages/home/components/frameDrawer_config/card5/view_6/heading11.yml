@@ -1,0 +1,44 @@
+id: '17267579637760.7143598211315512'
+definitionId: heading
+parentSlotId: '17267578921980.0828432903463161'
+styles:
+  xl:
+    gridItem:
+      id: '17267579637760.7143598211315512'
+      x: 0
+      y: 1
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    fontSize:
+      customValue: 14
+      customUnit: px
+  xs:
+    gridItem:
+      id: '17267579637760.7143598211315512'
+      x: 0
+      y: 18
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: heading11
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  alignment: center
+  text: Ubicación
+actions: {}
+slots: []

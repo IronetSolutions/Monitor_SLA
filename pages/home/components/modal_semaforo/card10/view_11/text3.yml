@@ -1,0 +1,50 @@
+id: '17270809235850.17709267358811487'
+definitionId: text
+parentSlotId: '17270808111900.4620462756335091'
+styles:
+  xl:
+    gridItem:
+      x: 2
+      y: 2
+      w: 18
+      h: 12
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 24
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    color:
+      value: hint
+      dataValue: basic
+      withData: false
+  xs:
+    gridItem:
+      x: 0
+      y: 36
+      w: 24
+      h: 6
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 24
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: text3
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  value: >-
+    Minutos restantes SLA a partir de los cuales, se activa el color de alerta
+    del semáforo
+  textStyle:
+    transform: none
+    styles:
+      - bold
+  alignment: center
+  verticalAlignment: middle
+actions: {}
+slots: []

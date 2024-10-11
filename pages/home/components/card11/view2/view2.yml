@@ -1,0 +1,16 @@
+id: '17271914921390.5587137944354585'
+definitionId: view
+parentSlotId: '17271609295580.15109917447886057'
+styles: {}
+properties:
+  name: view2
+  viewName: seleccionar
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+index: 1
+slots:
+  - id: '17271914921390.26185855988158635'
+    name: content
+    children:
+      - heading31.yml

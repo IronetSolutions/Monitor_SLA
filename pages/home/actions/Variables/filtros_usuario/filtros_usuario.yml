@@ -1,0 +1,16 @@
+id: '17278521897350.23908846932349115'
+kind: store_item
+name: filtros_usuario
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: false
+  valueType: boolean
+  initialValue: false
+  version: 1
+selected: true
+configured: true

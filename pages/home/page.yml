@@ -1,0 +1,51 @@
+id: '1'
+name: Home
+url: home
+roleIds:
+  - Uzg1gVDz6o
+  - ESlI0VFnXr
+  - 7o19yhrIlZ
+  - 4DZZhgBkg9
+disableInMenu: false
+hideFromMenu: false
+slots:
+  - id: '1'
+    name: content
+    bindings: {}
+    children:
+      - id: '1'
+        definitionId: grid
+        parentSlotId: '1'
+        index: 0
+        styles: {}
+        properties:
+          name: grid
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        actions:
+          pageLoad: []
+        slots:
+          - id: '2'
+            name: content
+            bindings: {}
+            children:
+              - components/querySlasTable.yml
+              - components/modal_detalle_incidencia/modal_detalle_incidencia.yml
+              - components/querySlasP1P2Chart.yml
+              - components/frameDrawer_config/frameDrawer_config.yml
+              - components/card8/card8.yml
+              - components/card9/card9.yml
+              - components/modal_semaforo/modal_semaforo.yml
+              - components/card11/card11.yml
+              - components/card12/card12.yml
+              - components/modal_filtros_bbdd/modal_filtros_bbdd.yml
+              - components/tabs_filter.yml
+              - components/card16/card16.yml
+              - components/modal_crear_filtro/modal_crear_filtro.yml
+              - components/alert.yml
+              - components/customComponent.yml
+              - components/modal_notificar/modal_notificar.yml
+              - components/toggle_slas_completados.yml
+              - components/toggle_slas_alcanzables.yml

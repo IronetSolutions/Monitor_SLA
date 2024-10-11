@@ -1,0 +1,1 @@
+{{actions.JS_acciones.trigger({type: "detalle_tarea_mapa"})}}

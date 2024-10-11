@@ -1,0 +1,54 @@
+id: '17274361438050.34459330714937186'
+definitionId: button
+parentSlotId: '17274298923820.27040051827111866'
+styles:
+  xl:
+    gridItem:
+      x: 20
+      y: 0
+      w: 4
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    iconPlacement: left
+  xs:
+    gridItem:
+      x: 0
+      y: 80
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: button6
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  text: Refrescar
+  icon:
+    value: refresh-outline
+    dataValue: star-outline
+    withData: false
+  appearance:
+    value: filled
+    dataValue: filled
+    withData: false
+actions:
+  buttonClick:
+    - action: '17274310566300.7078477732337629'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+slots: []

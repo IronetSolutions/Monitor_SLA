@@ -1,0 +1,108 @@
+id: '17268121040100.07745709376962995'
+definitionId: selectWithAtomics
+parentSlotId: '17267578921980.0828432903463161'
+styles:
+  xl:
+    gridItem:
+      x: 3
+      y: 10
+      w: 18
+      h: 14
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 27
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  options:
+    value:
+      - value: option_1
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '1'
+      - value: option_2
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '2'
+    dataValue: |-
+      [
+        {
+          "value": "1",
+          "title": "Z1"
+        },
+        {
+          "value": "2",
+          "title": "Z2"
+        },
+        {
+          "value": "3",
+          "title": "Z3"
+        },
+        {
+          "value": "4",
+          "title": "Z4"
+        },
+        {
+          "value": "5",
+          "title": "Z5"
+        },
+        {
+          "value": "6",
+          "title": "Z6"
+        },
+        {
+          "value": "7",
+          "title": "Z7"
+        }
+      ]
+    withData: true
+  name: select_zona
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  optionValueKey: value
+  showLoading:
+    withData: true
+    dataValue: 'false'
+    value: false
+  labelConfig:
+    text: Zona
+    position: vertical
+    align: left
+  multi: true
+actions: {}
+slots:
+  - id: '17268121040100.777784433952041'
+    name: optionViewTypes
+    children:
+      - id: '17268121040520.020542286866995774'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString38
+          prop: title
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          labelConfig:
+            align: left
+            position: vertical
+        parentSlotId: '17268121040100.777784433952041'
+        index: 1
+        slots: []

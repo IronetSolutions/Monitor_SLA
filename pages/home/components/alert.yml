@@ -1,0 +1,41 @@
+id: '17278532037430.3615500454444036'
+definitionId: alert
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 16
+      y: 0
+      w: 8
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17278532037430.3615500454444036'
+      x: 17
+      y: 1467
+      w: 7
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  heightMode: auto
+  name: alert
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  __UIBAKERY__SHOW__CONDITION__CODE__: '{{state.alertState}}'
+  value: '{{state.alertInfo}}'
+actions: {}
+slots: []

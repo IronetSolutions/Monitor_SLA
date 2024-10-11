@@ -1,0 +1,47 @@
+id: '17270807848420.08683883931831526'
+definitionId: numberEdit
+parentSlotId: '17270808111900.4620462756335091'
+styles:
+  xl:
+    gridItem:
+      x: 4
+      y: 30
+      w: 15
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17270807848420.08683883931831526'
+      x: 3
+      y: 9
+      w: 18
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: input_semaforo_ambar
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelConfig:
+    text: Ambar
+    position: horizontal
+    align: left
+  status:
+    value: warning
+    dataValue: basic
+    withData: false
+  value: '{{state.semaforo.amarillo[1]}}'
+actions: {}
+slots: []

@@ -1,0 +1,77 @@
+id: '17277942651170.8301781998072588'
+definitionId: selectWithAtomics
+parentSlotId: '17277947528050.21403884556393882'
+styles:
+  xl:
+    gridItem:
+      x: 1
+      y: 35
+      w: 20
+      h: 14
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17277942651170.8301781998072588'
+      x: 1
+      y: 45
+      w: 13
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  options:
+    value:
+      - value: option_1
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '1'
+      - value: option_2
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '2'
+    dataValue: '{{actions.slas_definidos.data}}'
+    withData: true
+  name: sla_nombre
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  optionValueKey: nombre
+  showLoading:
+    withData: true
+    dataValue: 'false'
+    value: false
+  labelConfig:
+    text: SLAs
+    position: vertical
+    align: left
+  multi: true
+  helpTooltip: Si no se selecciona ningún SLA, se visualizarán todos
+actions: {}
+slots:
+  - id: '17277942651170.4638603531082184'
+    name: optionViewTypes
+    children:
+      - id: '17277948823090.15917400445673335'
+        definitionId: atomicString
+        parentSlotId: '17277942651170.4638603531082184'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString15
+          prop: nombre
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []

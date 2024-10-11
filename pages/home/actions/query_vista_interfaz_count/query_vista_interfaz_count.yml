@@ -1,0 +1,89 @@
+id: '17284717753000.9772350976426194'
+kind: workflow
+name: query_vista_interfaz_count
+nameConfigured: true
+steps:
+  - id: '17284717753010.28915667941637024'
+    type: httpRequest
+    name: request
+    params:
+      - type: datasourceId
+        value: Backend_Local
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: /auto_api/GetList
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer {{actions.UserData.data[0].token_usr}}
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: ''
+                value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: "{\n  \"offset\": {{ui.querySlasTable.paginationOffset}},\n  \"limit\": 2000,\n  \"order_colum\": {{ui.querySlasTable.sortColumn}},\n  \"sort\": {{ui.querySlasTable.sortDirection}},\n  \"interface_ID\": \"GetList_SLAs|91767424-0938-4a12-b858-30d3f4cfa7e1\",\n  \"status\": ['Nuevo','Asignado'],\n  \"prioridad\": [],\n  \"nombre_sla\": {{state.filtros_contador.nombre_sla}},\n  \"zona\": {{state.filtros_contador.zona}},\n  \"provincia\": {{state.filtros_contador.provincia}},\n\t\"minutos_restantes\": {{state.minutos_restantes}}, \n\t\"estado\": {{state.slas_completados}},\n  \"user\": {{user.email}}\n}"
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value: []
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: object
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.query_vista_interfaz_count.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.query_vista_interfaz_count.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.query_vista_interfaz_count.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+parentId: null

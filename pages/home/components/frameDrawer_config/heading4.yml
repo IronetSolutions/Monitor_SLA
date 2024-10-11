@@ -1,0 +1,25 @@
+id: '17267525560280.8084648978575635'
+definitionId: heading
+styles:
+  xl:
+    fontSize:
+      customValue: 18
+      customUnit: px
+      themeDefaultOverridePropertyKey: baseTextFontSize
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 9
+properties:
+  name: heading4
+  text: Configuración Monitor SLAs
+  verticalAlignment: middle
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  alignment: center
+parentSlotId: '17267525560280.3202073794842475'
+index: 0
+actions: {}
+slots: []

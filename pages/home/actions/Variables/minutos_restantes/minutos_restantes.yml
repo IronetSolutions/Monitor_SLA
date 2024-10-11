@@ -1,0 +1,16 @@
+id: '17284162449260.07124181822156994'
+kind: store_item
+name: minutos_restantes
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: '0'
+  valueType: number
+  initialValue: '0'
+  version: 1
+selected: true
+configured: true

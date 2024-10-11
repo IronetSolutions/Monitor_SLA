@@ -1,0 +1,54 @@
+id: '17267584227520.11047975129095411'
+definitionId: button
+parentSlotId: '17267584076610.9150203563706547'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 2
+      w: 11
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: btn_aplicar_config
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  text: Aplicar
+actions:
+  buttonClick:
+    - action: '17266487430120.5064280841600912'
+      paramCode: |-
+        {
+          type: "modificar_filtro",
+          //sla_resolucion: {{ui.sla_nombre.value}},
+          zona: {{ui.select_zona.value}},
+          status: {{ui.select_estado_incidencia.value}},  
+          prioridad: {{ui.select_prio_incidencia.value}},
+          sla_vencido: {{ui.toggle_sla_vencido.value}},
+          //estado: {{ui.select_estado_sla.value}}
+        }
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+slots: []

@@ -1,0 +1,16 @@
+id: '17278117413240.8297725385320027'
+kind: store_item
+name: modo_modal_filtro
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: ''
+  valueType: string
+  initialValue: ''
+  version: 1
+selected: true
+configured: true

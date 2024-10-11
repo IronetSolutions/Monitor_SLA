@@ -1,0 +1,17 @@
+id: '17266661244720.8748818706452757'
+definitionId: view
+parentSlotId: '17266660722050.7110780127952068'
+styles: {}
+properties:
+  name: view
+  viewName: detail_task
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+index: 1
+slots:
+  - id: '17266661244720.7486947342517949'
+    name: content
+    children:
+      - getDetail.yml
+      - text2.yml

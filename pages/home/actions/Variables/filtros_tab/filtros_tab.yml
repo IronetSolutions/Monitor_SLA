@@ -1,0 +1,38 @@
+id: '17272545769940.16363781293068147'
+kind: store_item
+name: filtros_tab
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: |-
+    [
+    {
+      sla_nombre: [],
+      zonas: [],
+      provincias: [],
+      estado_incidencias: [],
+      secveridad: [],
+      ocultar_slas_vencidos: true,
+      estado_sla: ["activo"]
+    }
+    ]
+  valueType: array
+  initialValue: |-
+    [
+    {
+      sla_nombre: [],
+      zonas: [],
+      provincias: [],
+      estado_incidencias: [],
+      secveridad: [],
+      ocultar_slas_vencidos: true,
+      estado_sla: ["activo"]
+    }
+    ]
+  version: 1
+selected: true
+configured: true

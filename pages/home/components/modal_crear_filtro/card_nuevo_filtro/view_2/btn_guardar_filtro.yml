@@ -1,0 +1,53 @@
+id: '17277076823600.28248955539052045'
+definitionId: button
+parentSlotId: '17277947528050.21403884556393882'
+styles:
+  xl:
+    gridItem:
+      x: 8
+      y: 74
+      w: 8
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17277076823600.28248955539052045'
+      x: 8
+      y: 54
+      w: 8
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: btn_guardar_filtro
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  text: Guardar filtro
+  disabled:
+    value: false
+    dataValue: '{{!ui.card_nuevo_filtro.valid}}'
+    withData: true
+actions:
+  buttonClick:
+    - action: '17266487430120.5064280841600912'
+      paramCode: |-
+        {
+          type: 'guardar_filtro_monitor'
+        }
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+slots: []

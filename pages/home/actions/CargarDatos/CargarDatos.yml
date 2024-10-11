@@ -1,0 +1,35 @@
+id: '17278515402190.9429432427237749'
+kind: workflow
+name: CargarDatos
+nameConfigured: true
+steps:
+  - id: '17278515421850.2396986307179707'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.CargarDatos.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.CargarDatos.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: '{{actions.CargarDatos.error.Error}}'
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

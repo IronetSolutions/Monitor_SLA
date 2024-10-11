@@ -1,0 +1,397 @@
+id: '17271695940060.7646300757791731'
+definitionId: smartTable
+parentSlotId: '17271695792060.41732360340440233'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 9
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.GetList_filtros_monitor.data}}'
+  name: table_filtros_monitor
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: ''
+  showLoading:
+    withData: true
+    dataValue: '{{actions.GetList_filtros_monitor.loading}}'
+    value: false
+  showDeleteAction:
+    value: true
+    dataValue: |-
+      if({{row.username == "general"}}){
+        return false
+      }else return true
+    withData: true
+  showClearSelection:
+    value: true
+    dataValue: 'true'
+    withData: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  hideMode: notRendered
+actions:
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete:
+    - action: '17272452214540.8234386689151891'
+      paramCode: |-
+        {
+          id: {{ui.table_filtros_monitor.deletedRow.data.id_filtro}}
+        }
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  uiOnRowDoubleClick: []
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  smartTableReload: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17271695940060.7166127400078361'
+    name: columns
+    children:
+      - id: '17271704057290.6729764864439742'
+        definitionId: atomicNumber
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber17
+          prop: id_filtro
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 86
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        index: 0
+        actions: {}
+        slots: []
+      - id: '17271704057290.4151363038875522'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString46
+          prop: estado_incidencia
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 96
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 1
+        slots: []
+      - id: '17271704057290.49632691098854287'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString48
+          prop: nombre_tab
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 121
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 2
+        slots: []
+      - id: '17271704057290.7777427189304487'
+        definitionId: atomicNumber
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber19
+          prop: orden_presentacion
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 49
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 4
+        slots: []
+      - id: '17271704057290.48520812786694956'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString49
+          prop: provincias
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 156
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 5
+        slots: []
+      - id: '17271704057290.229485691327586'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString50
+          prop: severidad
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 105
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 6
+        slots: []
+      - id: '17271704057290.2872780631335541'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString51
+          prop: sla_nombre
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 348
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 7
+        slots: []
+      - id: '17271704057290.8749039977793827'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString52
+          prop: username
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 158
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 8
+        slots: []
+      - id: '17271704057290.7571355512506193'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString53
+          prop: zonas
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 89
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        index: 9
+        actions: {}
+        slots: []
+      - id: '17271704324750.09616027657087267'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString54
+          prop: estado_sla
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          labelConfig:
+            align: left
+            position: vertical
+        index: 10
+        slots: []
+      - id: '17271707224820.19563104253103947'
+        definitionId: atomicButton
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            iconPlacement: center
+        properties:
+          name: atomicButton2
+          text: '{{value}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          prop: Edit
+          pinColumn: left
+          alignment: center
+          appearance:
+            value: ghost
+            dataValue: filled
+            withData: false
+          icon:
+            value: edit
+            dataValue: star-outline
+            withData: false
+          width: 56
+          widthMode: fixed
+          __UIBAKERY__SHOW__CONDITION__CODE__: ''
+          disabled:
+            value: false
+            dataValue: |-
+              if({{row.username == "general"}}){
+                return true
+              }else return false
+            withData: true
+        actions:
+          buttonClick:
+            - action: '17266487430120.5064280841600912'
+              paramCode: |-
+                {
+                  type: 'recuperar_filtro',
+                  datos: {{row}}
+                }
+              blockPageLoad: false
+              preventDefault: false
+              index: 0
+        index: 11
+        slots: []
+      - id: '17271704057290.4505075961705445'
+        definitionId: atomicBoolean
+        parentSlotId: '17271695940060.7166127400078361'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicBoolean
+          prop: ocultar_slas_vencidos
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          widthMode: fixed
+          width: 89
+        index: 3
+        slots: []
+      - id: '17278551640040.16284394066502705'
+        definitionId: atomicString
+        parentSlotId: '17271695940060.7166127400078361'
+        styles: {}
+        properties:
+          name: atomicString47
+          prop: proyecto
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 12
+        slots: []

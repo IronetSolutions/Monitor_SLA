@@ -1,0 +1,28 @@
+id: '17265927817680.23590597365419885'
+name: content
+children:
+  - id: '17265927817720.7947183878049024'
+    definitionId: layoutHeader
+    parentSlotId: '17265927817680.23590597365419885'
+    styles:
+      xl:
+        backgroundColor:
+          value: info-light
+          dataValue: default
+          withData: false
+    properties:
+      name: layoutHeader
+      __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+        - xl
+        - xs
+    index: 0
+    slots:
+      - id: '17265927817720.9434495110065286'
+        name: content
+        children:
+          - components/image.yml
+          - components/text.yml
+          - components/heading.yml
+          - components/button.yml
+          - components/toggle_auto.yml
+          - components/icon5.yml

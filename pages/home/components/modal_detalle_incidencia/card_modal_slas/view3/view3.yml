@@ -1,0 +1,22 @@
+id: '17280344509280.774926660305784'
+definitionId: view
+parentSlotId: '17266660722050.7110780127952068'
+styles: {}
+properties:
+  name: view3
+  viewName: notificar_task
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+index: 2
+slots:
+  - id: '17280344509280.25637834915766633'
+    name: content
+    children:
+      - tecnico.yml
+      - telefono.yml
+      - email.yml
+      - toggle_email.yml
+      - toggle_telegram.yml
+      - txt_mensaje.yml
+      - button7.yml

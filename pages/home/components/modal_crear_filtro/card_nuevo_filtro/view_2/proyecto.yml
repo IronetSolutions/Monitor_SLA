@@ -1,0 +1,85 @@
+id: '17277946069490.07947007374936077'
+definitionId: selectWithAtomics
+parentSlotId: '17277947528050.21403884556393882'
+styles:
+  xl:
+    gridItem:
+      x: 1
+      y: 22
+      w: 12
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17277946069490.07947007374936077'
+      x: 1
+      y: 36
+      w: 13
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  options:
+    value:
+      - value: option_1
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '1'
+      - value: option_2
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '2'
+    dataValue: |-
+      [
+        {
+          value: 'VANTAGE',
+          title: 'VANTAGE',
+        }
+      ]
+    withData: true
+  name: proyecto
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  optionValueKey: value
+  showLoading:
+    withData: true
+    dataValue: 'false'
+    value: false
+  labelConfig:
+    text: Proyecto
+    position: horizontal
+    align: left
+  required:
+    value: true
+    dataValue: 'false'
+    withData: false
+actions: {}
+slots:
+  - id: '17277946069490.7131419952734761'
+    name: optionViewTypes
+    children:
+      - id: '17277951785550.5039185004225126'
+        definitionId: atomicString
+        parentSlotId: '17277946069490.7131419952734761'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString45
+          prop: title
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []

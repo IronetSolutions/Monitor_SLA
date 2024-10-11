@@ -1,0 +1,16 @@
+id: '17270818176540.9135086276855771'
+kind: store_item
+name: semaforo
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: "{\n\trojo: [0,60],\n  amarillo: [60,180],\n  verde: [180,43200]\n}"
+  valueType: object
+  initialValue: "{\n\trojo: [0,60],\n  amarillo: [60,180],\n  verde: [180,43200]\n}"
+  version: 1
+selected: true
+configured: true

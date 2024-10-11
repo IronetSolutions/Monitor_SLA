@@ -1,0 +1,52 @@
+id: '17266487430120.5064280841600912'
+kind: workflow
+name: JS_acciones
+nameConfigured: true
+steps:
+  - id: '17266487466660.24863531171718622'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17267672192790.9520049409153817'
+    type: putInLocalStorage
+    name: save2
+    params:
+      - type: name
+        value: filtro_monitor_slas
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.JS_acciones.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.JS_acciones.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.JS_acciones.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

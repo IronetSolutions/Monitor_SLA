@@ -1,0 +1,53 @@
+id: '17278751044320.23069307369728054'
+kind: workflow
+name: incidencia_mapa
+nameConfigured: true
+steps:
+  - id: '17278751788920.11769485250247524'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17278751519690.6983280081596062'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17278754963130.8840435586092685'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17269034229970.25287418239921666'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.incidencia_mapa.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.incidencia_mapa.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.incidencia_mapa.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

@@ -1,0 +1,16 @@
+id: '17278751519690.6983280081596062'
+kind: store_item
+name: incidencia_mapa
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: '{}'
+  valueType: object
+  initialValue: '{}'
+  version: 1
+selected: true
+configured: true

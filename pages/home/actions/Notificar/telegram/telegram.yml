@@ -1,0 +1,177 @@
+id: '17285525840160.10849911005257296'
+kind: server_workflow
+name: telegram
+nameConfigured: true
+steps:
+  - id: '17285527530020.7622225994724487'
+    type: httpRequest
+    name: GetTask
+    params:
+      - type: datasourceId
+        value: Backend_Local
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: /auto_api/Get
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer {{params.token}}
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: ''
+                value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: |-
+          {
+            "provincias":[],
+            "tareas": [],
+            "task_id": {{params.tarea}},
+            "interface_ID" : "Get_Tarea_Main|6b3f72e9-2ee4-4b80-9127-9b6fcefd7353"
+          }
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value: []
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: object
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+    paused: false
+  - id: '17285527130220.7861417251116227'
+    type: httpRequest
+    name: request_telegram
+    params:
+      - type: datasourceId
+        value: Telegram(N8N)
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: Content-Type
+                value: application/json
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          mode: structured
+          value:
+            custom: ''
+            structured:
+              - name: ''
+                value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: >-
+          {
+
+          "usuario" : {{steps.GetTask.data.datos.email}},
+
+          "mensaje" : "MONITOR SLAs VANTAGE - Notificación incidencia " +
+          {{steps.GetTask.data.datos.task_id}} + " sobre el site " +
+          {{steps.GetTask.data.datos.site_name}} + " con título " +
+          {{steps.GetTask.data.datos.title}} + " MENSAJE -> "
+          +{{params.mensaje}}
+
+          }
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value: []
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: object
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+    paused: false
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17284794575070.16580636111585778'
+defaultParams: return {{params}};
+automation:
+  workflowId: '17285525840160.07092857584304002'
+  key: ''
+  cron: ''
+  cronEnabled: false
+  webhookEnabled: false
+  timezone: UTC
+  notificationEnabled: false
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.telegram.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.telegram.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.telegram.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

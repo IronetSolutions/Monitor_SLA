@@ -1,0 +1,47 @@
+id: '17268208904060.6677231683377662'
+definitionId: heading
+parentSlotId: '17268195483280.13458659909216486'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 23
+      w: 4
+      h: 7
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    fontSize:
+      customValue: 12
+      customUnit: px
+  xs:
+    gridItem:
+      x: 0
+      y: 68
+      w: 24
+      h: 7
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: heading18
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  alignment: center
+  textStyle:
+    transform: none
+    styles:
+      - bold
+  text: Zonas
+  __UIBAKERY__SHOW__CONDITION__CODE__: 'true'
+actions: {}
+slots: []

@@ -1,0 +1,24 @@
+id: '17284157610470.3778918333487329'
+kind: store_item
+name: slas_completados
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: |-
+    [
+    "activo",
+    "pausado"
+    ]
+  valueType: array
+  initialValue: |-
+    [
+    "activo",
+    "pausado"
+    ]
+  version: 1
+selected: true
+configured: true

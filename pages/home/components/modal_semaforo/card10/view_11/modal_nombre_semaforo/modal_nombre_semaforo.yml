@@ -1,0 +1,72 @@
+id: '17274324862390.56157205700561'
+definitionId: modal
+parentSlotId: '17270808111900.4620462756335091'
+styles:
+  xl:
+    gridItem:
+      x: 13
+      y: 57
+      w: 11
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    buttonIconPlacement: left
+    modalSize:
+      widthValue: 30
+      widthUnit: '%'
+      heightValue: 40
+      heightUnit: '%'
+      minWidthValue: 0
+      minWidthUnit: px
+      minHeightValue: 0
+      minHeightUnit: px
+      maxWidthValue: none
+      maxWidthUnit: null
+      maxHeightValue: none
+      maxHeightUnit: null
+  xs:
+    gridItem:
+      x: 0
+      y: 60
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: modal_nombre_semaforo
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  buttonText: Guardar
+  buttonIcon:
+    value: save-outline
+    dataValue: star-outline
+    withData: false
+  buttonStatus:
+    value: basic
+    dataValue: primary
+    withData: false
+  hideMode: notRendered
+actions: {}
+slots:
+  - id: '17274324862390.09815286398425815'
+    name: header
+    children:
+      - heading35.yml
+  - id: '17274324862390.24944507292639373'
+    name: body
+    children:
+      - card_guardar_semaforo/card_guardar_semaforo.yml
+  - id: '17274324862390.671630249295039'
+    name: footer
+    children: []

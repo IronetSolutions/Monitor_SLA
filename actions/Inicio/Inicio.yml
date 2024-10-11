@@ -1,0 +1,38 @@
+id: '17267514542550.015677462502909467'
+kind: workflow
+name: Inicio
+nameConfigured: true
+steps:
+  - id: '17267514650230.3869528325532128'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.Inicio.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.Inicio.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.Inicio.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: false
+  preserveStateOnPageChange: true
+  autoTrigger: false
+  defaultParams: ''
+selected: true
+configured: false
+defaultParams: ''

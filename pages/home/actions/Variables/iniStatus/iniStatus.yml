@@ -1,0 +1,16 @@
+id: '17278527174980.03226208264711827'
+kind: store_item
+name: iniStatus
+nameConfigured: true
+steps: []
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '17266526419040.8974872204128526'
+storeItem:
+  value: 'true'
+  valueType: boolean
+  initialValue: 'true'
+  version: 1
+selected: true
+configured: true

@@ -1,0 +1,755 @@
+id: '17265929991410.0882005666546315'
+definitionId: smartTable
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 123
+      w: 24
+      h: 130
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 9
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: "if({{state.filtros_usuario == true}}){\n\treturn {{actions.query_vista_interfaz.data.datos}}\n}else {return \"No data found\"}"
+  name: querySlasTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: ''
+  showLoading:
+    value: false
+    dataValue: '{{actions.query_vista_interfaz.loading}}'
+    withData: true
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  serverSidePagination: false
+  totalRowCount: '{{actions.query_vista_interfaz.data.total}}'
+  limit: '[15]'
+  rowBackgroundColor: >-
+    {{ 
+
+    if(row.minutos_restantes >= -1000000 && row.minutos_restantes <=
+    state.semaforo.rojo[1]){
+        //return '#ff9494'; // rojo
+          return '#fca5a5'
+    }
+
+    if((row.minutos_restantes > state.semaforo.amarillo[0]) &&
+    (row.minutos_restantes <= state.semaforo.amarillo[1])){
+          return '#fcd34d'
+    }
+
+    if((row.minutos_restantes > state.semaforo.verde[0]) &&
+    (row.minutos_restantes <= state.semaforo.verde[1])){
+          return '#86efac'
+    }
+
+    }}
+  showFilter:
+    value: false
+    dataValue: 'false'
+    withData: false
+  enableUserColumnResize:
+    value: true
+    dataValue: 'false'
+    withData: false
+  selectedRowIndex: '0'
+  rowHeight: small
+  triggerRowSelectOnInit:
+    value: false
+    dataValue: 'false'
+    withData: false
+  totalRowConfig:
+    show: false
+    position: top
+    rowColor: hint
+    textStyle: []
+    textColor: basic
+    updateWhenFiltering: true
+    themeDefaultOverridePropertyKey: smartTableTotalRowConfig
+  heightMode: auto
+  __UIBAKERY__SHOW__CONDITION__CODE__: "if({{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Admin\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs _Coordinador\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs _Usuario\")}}){\n\treturn true\n}else return false"
+actions:
+  smartTablePageSelect: []
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete: []
+  smartTableRowSelect: []
+  smartTableRowClick:
+    - action: '17271163164940.6148283538099053'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+    - action: '17269034387720.8604351943955144'
+      paramCode: |-
+        {
+          type: 'localizar_incidencia'  
+        }
+      blockPageLoad: false
+      preventDefault: false
+      index: 1
+    - action: '17266487430120.5064280841600912'
+      paramCode: |-
+        {
+          type: "linea_seleccionada",
+          linea: {{selectedRow.data}}
+        }
+      blockPageLoad: false
+      preventDefault: false
+      index: 4
+  uiOnRowDoubleClick: []
+  uiOnPageSizeChange:
+    - action: '17284007648470.6333529738151022'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 2
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  smartTableReload:
+    - action: '17284007648470.6333529738151022'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 3
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17265929991410.40481108601890314'
+    name: columns
+    children:
+      - id: '17266698980560.6433103633999524'
+        definitionId: atomicDateTime
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicDateTime
+          prop: fecha_inicio
+          primaryKey: false
+          timeFormat:
+            value: HH:mm
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 126
+          widthMode: fixed
+          filter: true
+          dateFormat:
+            value: yyyy-MM-dd
+            dataValue: MMM dd, yyyy
+            withData: false
+          textStyle:
+            transform: none
+            styles: []
+          title: Inicio SLA
+          labelConfig:
+            align: left
+            position: vertical
+        index: 8
+        actions: {}
+        slots: []
+      - id: '17266698980560.47719971881866363'
+        definitionId: atomicNumber
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber
+          prop: paradas
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 72
+          widthMode: fixed
+          filter: true
+          textStyle:
+            transform: none
+            styles: []
+          labelConfig:
+            align: left
+            position: vertical
+        index: 12
+        actions: {}
+        slots: []
+      - id: '17266698980560.3884091420585536'
+        definitionId: atomicNumber
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber2
+          prop: duracion
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 89
+          widthMode: fixed
+          filter: true
+          disableFormatting: true
+          title: Duración (min)
+          textStyle:
+            transform: none
+            styles: []
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 7
+        slots: []
+      - id: '17266698980560.26714245841950524'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString4
+          prop: nombre_sla
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 229
+          widthMode: fixed
+          filter: true
+          textStyle:
+            transform: none
+            styles: []
+          title: Nombre SLA
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 3
+        slots: []
+      - id: '17266698980560.2879150429387627'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString5
+          prop: minutos_transcurridos
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        index: 14
+        slots: []
+      - id: '17266698980560.7739805932873127'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString34
+          prop: SLAResult
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        index: 15
+        slots: []
+      - id: '17266698980560.7837796542786764'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString35
+          prop: total_minutos_pausa
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+        index: 16
+        slots: []
+      - id: '17266698980560.7079341734672389'
+        definitionId: atomicNumber
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber3
+          prop: RunningTime
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 83
+          widthMode: fixed
+          filter: true
+          labelConfig:
+            align: left
+            position: vertical
+          disableFormatting: true
+        index: 17
+        actions: {}
+        slots: []
+      - id: '17266699042200.7434008514377615'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString36
+          prop: comentarios
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          labelConfig:
+            align: left
+            position: vertical
+        index: 19
+        slots: []
+      - id: '17266703331760.15681108807237387'
+        definitionId: atomicButton
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            iconPlacement: center
+            visible: false
+        properties:
+          name: atomicButton
+          text: '{{value}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          prop: SLAs
+          pinColumn: left
+          appearance:
+            value: ghost
+            dataValue: filled
+            withData: false
+          icon:
+            value: flag
+            dataValue: star-outline
+            withData: false
+          width: 51
+          widthMode: fixed
+          title: SLAs
+        actions:
+          buttonClick:
+            - action: '17266487430120.5064280841600912'
+              paramCode: |-
+                {
+                  type: 'slas_tarea',
+                  datos: {{row}}
+                }
+              blockPageLoad: false
+              preventDefault: false
+              index: 0
+        index: 0
+        slots: []
+      - id: '17266698980560.3716317205238193'
+        definitionId: atomicNumber
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber4
+          prop: minutos_restantes
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          widthMode: fixed
+          width: 110
+          disableFormatting: true
+          decoration: null
+          textStyle:
+            transform: none
+            styles: []
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 18
+        slots: []
+      - id: '17266698980560.042438964726572825'
+        definitionId: atomicDateTime
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicDateTime6
+          prop: fecha_fin
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          widthMode: auto
+          width: 120
+          dateFormat:
+            value: yyyy-MM-dd
+            dataValue: MMM dd, yyyy
+            withData: false
+          timeFormat:
+            value: HH:mm
+            dataValue: HH:mm
+            withData: false
+          textStyle:
+            transform: none
+            styles:
+              - bold
+          title: Fin SLA
+          labelConfig:
+            align: left
+            position: vertical
+        index: 10
+        slots: []
+      - id: '17266713716510.16422047921824245'
+        definitionId: atomicNumber
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber15
+          prop: total_minutos_pausa
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          disableFormatting: true
+          width: 118
+          widthMode: fixed
+          textStyle:
+            transform: none
+            styles: []
+          labelConfig:
+            align: left
+            position: vertical
+        actions: {}
+        index: 13
+        slots: []
+      - id: '17267322051970.32223483523509255'
+        definitionId: atomicDateTime
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl: {}
+        properties:
+          name: atomicDateTime
+          prop: FechaLimite
+          primaryKey: false
+          timeFormat:
+            value: HH:mm
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          dateFormat:
+            value: yyyy-MM-dd
+            dataValue: MMM dd, yyyy
+            withData: false
+          width: 128
+          widthMode: fixed
+          textStyle:
+            transform: none
+            styles: []
+          labelConfig:
+            align: left
+            position: vertical
+        index: 9
+        actions: {}
+        slots: []
+      - id: '17269024432470.6440030770786203'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString14
+          prop: latitud
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          labelConfig:
+            align: left
+            position: vertical
+        index: 20
+        slots: []
+      - id: '17269024579340.03901975433516203'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString37
+          prop: longitud
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          labelConfig:
+            align: left
+            position: vertical
+        index: 21
+        slots: []
+      - id: '17269027418670.030450202931793235'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString42
+          prop: site_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          labelConfig:
+            align: left
+            position: vertical
+        index: 22
+        slots: []
+      - id: '17266698980560.020502345707242853'
+        definitionId: atomicLink
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicLink
+          prop: task_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          text: '{{value}}'
+          primaryKey: true
+          widthMode: fixed
+          width: 169
+          textStyle:
+            transform: none
+            styles:
+              - bold
+          lines: '1'
+          openInNewTab: false
+          labelConfig:
+            align: left
+            position: vertical
+        actions:
+          linkClick:
+            - action: '17266487430120.5064280841600912'
+              paramCode: |-
+                {
+                  type: 'detalle_tarea',
+                  datos: {{row}}
+                }
+              blockPageLoad: false
+              preventDefault: true
+              index: 0
+        index: 1
+        slots: []
+      - id: '17266698980560.4716038323118583'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString43
+          prop: status
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          title: Estado Tarea
+          primaryKey: false
+          filter: true
+          widthMode: fixed
+          width: 94
+          labelConfig:
+            align: left
+            position: vertical
+        index: 2
+        actions: {}
+        slots: []
+      - id: '17266698980560.06266495514162074'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString44
+          prop: estado
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          title: Estado SLA
+          primaryKey: false
+          filter: true
+          widthMode: fixed
+          width: 92
+          labelConfig:
+            align: left
+            position: vertical
+        index: 11
+        slots: []
+      - id: '17284009321060.9904996537902755'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles: {}
+        properties:
+          name: atomicString59
+          prop: zona
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 23
+        slots: []
+      - id: '17284009440510.6718379769518785'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl: {}
+        properties:
+          name: atomicString60
+          prop: provincia
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 103
+          widthMode: fixed
+        index: 24
+        actions: {}
+        slots: []
+      - id: '17284009761800.8564559730639612'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles: {}
+        properties:
+          name: atomicString61
+          prop: status
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 5
+        slots: []
+      - id: '17284011154520.996272069452266'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl: {}
+        properties:
+          name: atomicString62
+          prop: title
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 298
+          widthMode: fixed
+        actions: {}
+        index: 4
+        slots: []
+      - id: '17284115639060.586219407121692'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString63
+          prop: telefono
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 25
+        slots: []
+      - id: '17284116536740.1954554141188216'
+        definitionId: atomicString
+        parentSlotId: '17265929991410.40481108601890314'
+        styles:
+          xl: {}
+        properties:
+          name: atomicString64
+          prop: sub_status
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 129
+          widthMode: fixed
+        index: 6
+        actions: {}
+        slots: []

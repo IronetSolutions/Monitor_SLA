@@ -1,0 +1,56 @@
+id: '17274335807460.9808788161304234'
+definitionId: numberEdit
+styles:
+  xl:
+    gridItem:
+      x: 7
+      y: 42
+      w: 11
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    labelColor:
+      value: success
+      dataValue: basic
+      withData: false
+  xs:
+    gridItem:
+      id: '17274329349950.5858312993309613'
+      x: 7
+      y: 32
+      w: 11
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: verde
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelConfig:
+    text: Verde
+    position: horizontal
+    align: left
+  status:
+    value: success
+    dataValue: basic
+    withData: false
+  value: '{{ui.input_semaforo_verde.value}}'
+  disabled:
+    value: false
+    dataValue: 'true'
+    withData: true
+parentSlotId: '17274335807460.8160098768300694'
+index: 0
+actions: {}
+slots: []
