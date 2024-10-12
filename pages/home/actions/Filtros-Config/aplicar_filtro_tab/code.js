@@ -30,6 +30,7 @@ if({{state.filtros_usuario == true}}){
 	//{{ui.tabs_filter.selectTab(0)}}
 	//{{actions.recarga_datos.trigger()}}
  {{actions.query_vista_interfaz.trigger()}}
+ 
 	return filtro_normalizado;
   
 }

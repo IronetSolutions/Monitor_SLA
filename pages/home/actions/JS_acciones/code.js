@@ -188,11 +188,13 @@ if({{params.type == 'guardar_filtro_monitor'}}){
 if({{params.type == "slas_completados"}}){
 		if({{ui.toggle_slas_completados.value == true}}){
       {{state.slas_completados = ['activo','pausado','completado']}}
-      {{actions.query_vista_interfaz.trigger()}} 
+      //{{actions.query_vista_interfaz.trigger()}} 
+      {{actions.recarga_datos.trigger()}}
     }
   		if({{ui.toggle_slas_completados.value == false}}){
       {{state.slas_completados = ['activo','pausado']}}
-      {{actions.query_vista_interfaz.trigger()}}  
+      //{{actions.query_vista_interfaz.trigger()}}  
+      {{actions.recarga_datos.trigger()}}  
     }
 }
   
@@ -200,12 +202,14 @@ if({{params.type == "slas_alcanzables"}}){
 		if({{ui.toggle_slas_alcanzables.value == true}}){
       {{state.minutos_restantes = 0}}
       //{{actions.Inicio.trigger()}}
-      {{actions.query_vista_interfaz.trigger()}} 
+      //{{actions.query_vista_interfaz.trigger()}} 
+      {{actions.recarga_datos.trigger()}}
     }
   	if({{ui.toggle_slas_alcanzables.value == false}}){
       {{state.minutos_restantes = -90000000}}
       //{{actions.Inicio.trigger()}}
-      {{actions.query_vista_interfaz.trigger()}} 
+      //{{actions.query_vista_interfaz.trigger()}} 
+      {{actions.recarga_datos.trigger()}}
     }
 }
   

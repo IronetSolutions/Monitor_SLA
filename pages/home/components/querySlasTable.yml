@@ -68,28 +68,9 @@ properties:
   serverSidePagination: false
   totalRowCount: '{{actions.query_vista_interfaz.data.total}}'
   limit: '[15]'
-  rowBackgroundColor: >-
-    {{ 
-
-    if(row.minutos_restantes >= -1000000 && row.minutos_restantes <=
-    state.semaforo.rojo[1]){
-        //return '#ff9494'; // rojo
-          return '#fca5a5'
-    }
-
-    if((row.minutos_restantes > state.semaforo.amarillo[0]) &&
-    (row.minutos_restantes <= state.semaforo.amarillo[1])){
-          return '#fcd34d'
-    }
-
-    if((row.minutos_restantes > state.semaforo.verde[0]) &&
-    (row.minutos_restantes <= state.semaforo.verde[1])){
-          return '#86efac'
-    }
-
-    }}
+  rowBackgroundColor: "{{ \nif(row.minutos_restantes == null){\n\t\t\treturn '#b0b0b0'\n}\nif(row.minutos_restantes >= -1000000 && row.minutos_restantes <= state.semaforo.rojo[1]){\n    //return '#ff9494'; // rojo\n      return '#fca5a5'\n}\nif((row.minutos_restantes > state.semaforo.amarillo[0]) && (row.minutos_restantes <= state.semaforo.amarillo[1])){\n      return '#fcd34d'\n}\nif((row.minutos_restantes > state.semaforo.verde[0]) && (row.minutos_restantes <= state.semaforo.verde[1])){\n      return '#86efac'\n}\n}}"
   showFilter:
-    value: false
+    value: true
     dataValue: 'false'
     withData: false
   enableUserColumnResize:
