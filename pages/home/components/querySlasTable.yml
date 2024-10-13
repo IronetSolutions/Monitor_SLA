@@ -175,7 +175,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 8
+        index: 7
         actions: {}
         slots: []
       - id: '17266698980560.47719971881866363'
@@ -200,7 +200,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 12
+        index: 11
         actions: {}
         slots: []
       - id: '17266698980560.3884091420585536'
@@ -228,7 +228,7 @@ slots:
             align: left
             position: vertical
         actions: {}
-        index: 7
+        index: 6
         slots: []
       - id: '17266698980560.26714245841950524'
         definitionId: atomicString
@@ -254,7 +254,7 @@ slots:
             align: left
             position: vertical
         actions: {}
-        index: 3
+        index: 4
         slots: []
       - id: '17266698980560.2879150429387627'
         definitionId: atomicString
@@ -275,7 +275,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 14
+        index: 13
         slots: []
       - id: '17266698980560.7739805932873127'
         definitionId: atomicString
@@ -296,7 +296,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 15
+        index: 14
         slots: []
       - id: '17266698980560.7837796542786764'
         definitionId: atomicString
@@ -317,7 +317,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 16
+        index: 15
         slots: []
       - id: '17266698980560.7079341734672389'
         definitionId: atomicNumber
@@ -339,7 +339,7 @@ slots:
             align: left
             position: vertical
           disableFormatting: true
-        index: 17
+        index: 16
         actions: {}
         slots: []
       - id: '17266699042200.7434008514377615'
@@ -357,7 +357,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 19
+        index: 18
         slots: []
       - id: '17266703331760.15681108807237387'
         definitionId: atomicButton
@@ -423,7 +423,7 @@ slots:
             align: left
             position: vertical
         actions: {}
-        index: 18
+        index: 17
         slots: []
       - id: '17266698980560.042438964726572825'
         definitionId: atomicDateTime
@@ -457,7 +457,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 10
+        index: 9
         slots: []
       - id: '17266713716510.16422047921824245'
         definitionId: atomicNumber
@@ -481,7 +481,7 @@ slots:
             align: left
             position: vertical
         actions: {}
-        index: 13
+        index: 12
         slots: []
       - id: '17267322051970.32223483523509255'
         definitionId: atomicDateTime
@@ -511,7 +511,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 9
+        index: 8
         actions: {}
         slots: []
       - id: '17269024432470.6440030770786203'
@@ -529,7 +529,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 20
+        index: 19
         slots: []
       - id: '17269024579340.03901975433516203'
         definitionId: atomicString
@@ -546,7 +546,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 21
+        index: 20
         slots: []
       - id: '17269027418670.030450202931793235'
         definitionId: atomicString
@@ -563,7 +563,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 22
+        index: 21
         slots: []
       - id: '17266698980560.020502345707242853'
         definitionId: atomicLink
@@ -646,7 +646,7 @@ slots:
           labelConfig:
             align: left
             position: vertical
-        index: 11
+        index: 10
         slots: []
       - id: '17284009321060.9904996537902755'
         definitionId: atomicString
@@ -658,7 +658,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-        index: 23
+        index: 22
         slots: []
       - id: '17284009440510.6718379769518785'
         definitionId: atomicString
@@ -673,20 +673,8 @@ slots:
             - xs
           width: 103
           widthMode: fixed
-        index: 24
+        index: 23
         actions: {}
-        slots: []
-      - id: '17284009761800.8564559730639612'
-        definitionId: atomicString
-        parentSlotId: '17265929991410.40481108601890314'
-        styles: {}
-        properties:
-          name: atomicString61
-          prop: status
-          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
-            - xl
-            - xs
-        index: 5
         slots: []
       - id: '17284011154520.996272069452266'
         definitionId: atomicString
@@ -702,7 +690,7 @@ slots:
           width: 298
           widthMode: fixed
         actions: {}
-        index: 4
+        index: 5
         slots: []
       - id: '17284115639060.586219407121692'
         definitionId: atomicString
@@ -716,7 +704,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-        index: 25
+        index: 24
         slots: []
       - id: '17284116536740.1954554141188216'
         definitionId: atomicString
@@ -731,6 +719,7 @@ slots:
             - xs
           width: 129
           widthMode: fixed
-        index: 6
+          title: SubEstado Tarea
+        index: 3
         actions: {}
         slots: []
