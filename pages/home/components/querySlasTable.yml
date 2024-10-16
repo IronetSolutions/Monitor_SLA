@@ -92,7 +92,7 @@ properties:
     updateWhenFiltering: true
     themeDefaultOverridePropertyKey: smartTableTotalRowConfig
   heightMode: auto
-  __UIBAKERY__SHOW__CONDITION__CODE__: "if({{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Admin\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Coordinador\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Usuario\")}}){\n\treturn true\n}else return false"
+  __UIBAKERY__SHOW__CONDITION__CODE__: "if({{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Admin\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs _Coordinador\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs _Usuario\")}}){\n\treturn true\n}else return false"
 actions:
   smartTablePageSelect: []
   init: []
