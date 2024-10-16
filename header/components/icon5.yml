@@ -44,7 +44,7 @@ properties:
     value: funnel
     dataValue: star-outline
     withData: false
-  __UIBAKERY__SHOW__CONDITION__CODE__: "if({{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Admin\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs _Coordinador\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs _Usuario\")}}){\n\treturn true\n}else return false"
+  __UIBAKERY__SHOW__CONDITION__CODE__: "if({{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Admin\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Coordinador\")}} || {{actions.UserData.data[1].flat_roles.includes(\"Monitor SLAs_Usuario\")}}){\n\treturn true\n}else return false"
 actions:
   iconClick:
     - action: '17266487430120.5064280841600912'
