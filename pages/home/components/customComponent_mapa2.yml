@@ -1,0 +1,45 @@
+id: '17293295221680.3385249547142164'
+definitionId: customComponent
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 270
+      w: 8
+      h: 105
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 120
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 1893
+      w: 24
+      h: 105
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 120
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{actions.puntos_mapa_nuevo.data}}'
+  template: "<!DOCTYPE html>\n<html>\n<head>           \n    <title></title> \n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <!-- Leaflet CSS -->\n    <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\" />\n    \n    <style>\n        #map {\n            height: 390px;\n        }\n        \n        /* Estilos para los diferentes colores de los marcadores */\n        .custom-marker-red {\n            width: 12px;\n            height: 12px;\n            background-color: red;\n            border-radius: 50%;\n            border: 2px solid white;\n        }\n\n        .custom-marker-ambar {\n            width: 12px;\n            height: 12px;\n            background-color: orange;\n            border-radius: 50%;\n            border: 2px solid white;\n        }\n        \n      \t.custom-marker-green {\n            width: 12px;\n            height: 12px;\n            background-color: green;\n            border-radius: 50%;\n            border: 2px solid white;\n        }\n    </style>\n</head>\n<body>\n\n    <h1></h1>\n    <div id=\"map\"></div>\n\n    <!-- Leaflet JS -->\n    <script src=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\"></script>\n\n    <script>\n        // Inicializa el mapa centrado en una ubicación (Latitud, Longitud) con un nivel de zoom\n        var map = L.map('map').setView([40.416775, -3.703790], 5); // Centrando en Madrid\n\n        // Capa base del mapa utilizando OpenStreetMap\n        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {\n            attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors'\n        }).addTo(map);\n\n        // Definir iconos personalizados para Urgente, Atención y Seguimiento\n        var redIcon = L.divIcon({\n            className: 'custom-marker-red',\n            iconSize: [12, 12]\n        });\n\n        var ambarIcon = L.divIcon({\n            className: 'custom-marker-ambar',\n            iconSize: [12, 12]\n        });\n\n        var greenIcon = L.divIcon({\n            className: 'custom-marker-green',\n            iconSize: [12, 12]\n        });\n\n        // Capas de grupos para Urgente, Atención y Seguimiento (vacías inicialmente)\n        var UrgenteLayer = L.layerGroup().addTo(map);\n        var AtencionLayer = L.layerGroup().addTo(map);\n\t\t\t\tvar SeguimientoLayer = L.layerGroup().addTo(map);\n\n        // Control de capas para alternar entre tiempo expiración SLA\n        var overlayMaps = {\n            \"Seguimiento\": SeguimientoLayer,\n            \"Atención\": AtencionLayer,\n            \"Urgente\": UrgenteLayer,\n        };\n        L.control.layers(null, overlayMaps, { collapsed: false }).addTo(map);\n\n        // Obtener datos\n        UB.onData((data) => {\n            puntos = data;\n            // Limpiar las capas antes de añadir nuevos puntos\n            UrgenteLayer.clearLayers();\n            AtencionLayer.clearLayers();\n            SeguimientoLayer.clearLayers();\n\n            // Recorrer los puntos y agregar nuevos marcadores\n            puntos.forEach(function(punto) {\n                var icon\n              \tif(punto.tipo == 'Rojo'){icon = redIcon};\n                if(punto.tipo == 'Ambar'){icon = ambarIcon};\n                if(punto.tipo == 'Verde'){icon = greenIcon};\n                var marker = L.marker([punto.lat, punto.lng], { icon: icon })\n                    .bindPopup(\"<b>\" + punto.nombre + \"</b><br>Tipo: \" + punto.tipo);\n\n                // Añadir marcador a la capa correspondiente\n                if (punto.tipo == 'Rojo') {\n                    marker.addTo(UrgenteLayer); // Añadir a la capa de Urgente\n                } else if (punto.tipo == 'Ambar') {\n                    marker.addTo(AtencionLayer);   // Añadir a la capa de Atención\n                } else if (punto.tipo == 'Verde') {\n                \t\t marker.addTo(SeguimientoLayer);   // Añadir a la capa de Seguimiento\n                }\n            });\n        });\n    </script>\n\n</body>\n</html>\n"
+  name: customComponent_mapa2
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+actions:
+  triggerEvent:
+    - action: '17278751044320.23069307369728054'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+slots: []

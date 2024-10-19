@@ -36,3 +36,11 @@ config:
 selected: true
 configured: false
 defaultParams: ''
+actions:
+  success:
+    - action: '17272491067720.6025019894992709'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  error: []

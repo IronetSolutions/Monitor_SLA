@@ -1,11 +1,11 @@
-id: '17278745324560.3299378825356871'
+id: '17293237058010.9317369512320015'
 definitionId: customComponent
 parentSlotId: '2'
 styles:
   xl:
     gridItem:
-      x: 16
-      y: 9
+      x: 3
+      y: 270
       w: 8
       h: 105
     flex:
@@ -18,9 +18,9 @@ styles:
   xs:
     gridItem:
       x: 0
-      y: 1596
+      y: 1683
       w: 24
-      h: 30
+      h: 105
     flex:
       size:
         widthValue: auto

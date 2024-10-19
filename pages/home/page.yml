@@ -45,7 +45,9 @@ slots:
               - components/card16/card16.yml
               - components/modal_crear_filtro/modal_crear_filtro.yml
               - components/alert.yml
-              - components/customComponent.yml
               - components/modal_notificar/modal_notificar.yml
               - components/toggle_slas_completados.yml
               - components/toggle_slas_alcanzables.yml
+              - components/customComponent.yml
+              - components/customComponent_mapa2.yml
+              - components/customComponent_mapa.yml

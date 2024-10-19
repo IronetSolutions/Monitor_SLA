@@ -20,7 +20,7 @@ if({{params.type == "detalle_tarea"}}){
 if({{params.type == "detalle_tarea_mapa"}}){
   //{{ui.card_modal_slas.selectView("detail_task")}}
   {{state.view_card = "detail_task"}}
-  {{state.task_id = state.incidencia_mapa.name}}
+  {{state.task_id = state.incidencia_mapa.nombre}}
   //actions.GetTask.trigger({task_id: state.incidencia_mapa.name})}}
   {{actions.GetTask.trigger({task_id: state.linea_seleccionada.task_id})}}
   {{ui.modal_detalle_incidencia.open()}}
