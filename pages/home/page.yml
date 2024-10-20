@@ -38,7 +38,7 @@ slots:
               - components/card8/card8.yml
               - components/card9/card9.yml
               - components/modal_semaforo/modal_semaforo.yml
-              - components/card11/card11.yml
+              - components/card_metricas/card_metricas.yml
               - components/card12/card12.yml
               - components/modal_filtros_bbdd/modal_filtros_bbdd.yml
               - components/tabs_filter.yml
@@ -48,6 +48,5 @@ slots:
               - components/modal_notificar/modal_notificar.yml
               - components/toggle_slas_completados.yml
               - components/toggle_slas_alcanzables.yml
-              - components/customComponent.yml
-              - components/customComponent_mapa2.yml
               - components/customComponent_mapa.yml
+              - components/button9.yml

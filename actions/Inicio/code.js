@@ -13,3 +13,4 @@
   status: [],
   sla_vencido: true
 }
+{{ui.card_metricas.selectView("metricas")}}

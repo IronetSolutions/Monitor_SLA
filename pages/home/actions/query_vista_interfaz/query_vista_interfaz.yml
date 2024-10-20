@@ -94,11 +94,6 @@ actions:
       blockPageLoad: false
       preventDefault: false
       index: 0
-    - action: '17269034387720.8604351943955144'
-      paramCode: ''
-      blockPageLoad: false
-      preventDefault: false
-      index: 1
     - action: '17293233836080.7008424513595612'
       paramCode: ''
       blockPageLoad: false

@@ -31,12 +31,12 @@ styles:
       grow: '0'
       shrink: '0'
 properties:
-  name: card11
+  name: card_metricas
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
   showHeader: false
-  enableViews: false
+  enableViews: true
 actions: {}
 slots:
   - id: '17271609295580.6126271484969401'
@@ -51,3 +51,4 @@ slots:
     children:
       - view_12/view_12.yml
       - view2/view2.yml
+      - view4/view4.yml

@@ -12,18 +12,26 @@ if({{params.type == "localizar_incidencia"}}){
 let resultado = tareas.map(tarea => {
     let latitud = tarea.latitud;
     let longitud = tarea.longitud;
+		//if(tarea.prioridad == 1 || tarea.prioridad == 2){tipo = "P1-P2"}          
+    //if(tarea.prioridad == 3 || tarea.prioridad == 4 || tarea.prioridad == 5){tipo = "P3-P5"}	
+		if (tarea.minutos_restantes < {{state.semaforo.rojo[1]}}) {
+ 		 	tipo = "Urgente";
+		} else if (tarea.minutos_restantes < {{state.semaforo.amarillo[1]}}) {
+  		tipo = "Atención";
+		} else if (tarea.minutos_restantes < {{state.semaforo.verde[1]}}) {
+  		tipo = "Seguimiento";
+}
 
     if (latitud !== null && longitud !== null) {
         return {
-            latitude: latitud,
-            longitude: longitud,
-            name: `${tarea.task_id}`,
-            //icon: tarea.status === 'Asignado' ? 'person' : 'home',
-            color: "#d75c77"
-						
+            lat: latitud,
+            lng: longitud,
+            nombre: `${tarea.task_id}`,
+						tipo: tipo,          
+
         };
  }
 }).filter(Boolean); // Filtrar los objetos nulos
 
-
+console.log(resultado)
 return resultado;
