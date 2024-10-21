@@ -1,21 +1,74 @@
-id: '17284007648470.6333529738151022'
+id: '17294961821280.2494980566414069'
 kind: workflow
-name: query_vista_interfaz
+name: Exporta_Excel
 nameConfigured: true
 steps:
-  - id: '17284007648470.04905046312686756'
+  - id: '17294961821280.2845056212975927'
+    type: showToast
+    name: notification
+    params:
+      - type: message
+        value: Exportando.... Espere por favor
+        valueType: interpolatedValue
+      - type: type
+        value: success
+        valueType: string
+      - type: icon
+        value: checkmark-circle-2
+        valueType: string
+      - type: duration
+        value: '3000'
+        valueType: interpolatedValue
+      - type: position
+        value: top-end
+        valueType: string
+      - type: hideOnClick
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17294961821280.36408831656189933'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17294963096990.7812267473707466'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: string
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17294961821280.22326090036599067'
     type: httpRequest
-    name: request
+    name: request2
     params:
       - type: datasourceId
         value: Backend_Local
-        valueType: string
+        valueType: custom
         mustSelectFirst: true
       - type: method
         value: POST
         valueType: string
       - type: url
-        value: /auto_api/GetList
+        value: /auto_api/llaves/descargar_excel
         valueType: interpolatedValue
         interpolationType: string
       - type: headers
@@ -65,38 +118,35 @@ steps:
     level: 0
     fallthroughError: false
     isChanged: true
+  - id: '17294961821280.8306357491382912'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
+parentId: '17294961686820.13987453840913466'
 config:
-  shouldConfirm: false
-  confirmMessage: >-
-    Are you sure you'd like to proceed with
-    "{{actions.query_vista_interfaz.name}}"?
+  shouldConfirm: true
+  confirmMessage: ¿Exportar?
   showSuccessToast: false
-  successToast: Action "{{actions.query_vista_interfaz.name}}" successfully executed
+  successToast: Action "{{actions.Exporta_Excel.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.query_vista_interfaz.name}}" has failed
+  errorToast: '{{actions.Exporta_Excel.error}}'
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-selected: false
+selected: true
 configured: true
-parentId: null
-actions:
-  success:
-    - action: '17267557750670.6286762770161851'
-      paramCode: ''
-      blockPageLoad: false
-      preventDefault: false
-      index: 0
-    - action: '17293233836080.7008424513595612'
-      paramCode: ''
-      blockPageLoad: false
-      preventDefault: false
-      index: 2
-  error: []

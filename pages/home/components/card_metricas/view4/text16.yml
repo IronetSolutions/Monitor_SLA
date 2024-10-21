@@ -1,13 +1,13 @@
-id: '17294537022550.4600635151342354'
+id: '17294986901730.28260017597213927'
 definitionId: text
 parentSlotId: '17294531645320.24085811434103732'
 styles:
   xl:
     gridItem:
-      x: 13
-      y: 15
-      w: 11
-      h: 6
+      x: 14
+      y: 2
+      w: 10
+      h: 9
     flex:
       size:
         widthValue: auto
@@ -15,10 +15,14 @@ styles:
         heightUnit: px
       grow: '0'
       shrink: '0'
+    fontSize:
+      customValue: 14
+      customUnit: px
+      themeDefaultOverridePropertyKey: baseTextFontSize
   xs:
     gridItem:
       x: 0
-      y: 21
+      y: 72
       w: 24
       h: 6
     flex:
@@ -29,14 +33,16 @@ styles:
       grow: '0'
       shrink: '0'
 properties:
-  name: text14
+  name: text16
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
-  value: Minutos target SLA -> {{state.linea_seleccionada.duracion}}
+  value: '{{state.linea_seleccionada.task_id}}'
   textStyle:
     transform: none
     styles:
       - bold
+  alignment: center
+  verticalAlignment: middle
 actions: {}
 slots: []

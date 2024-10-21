@@ -4,8 +4,8 @@ parentSlotId: '17294531645320.24085811434103732'
 styles:
   xl:
     gridItem:
-      x: 5
-      y: 4
+      x: 0
+      y: 2
       w: 14
       h: 9
     flex:
@@ -33,4 +33,7 @@ properties:
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
+  alignment: center
+  text: SLA Completado
+actions: {}
 slots: []

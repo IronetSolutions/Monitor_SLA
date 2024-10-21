@@ -1,11 +1,11 @@
-id: '17294537022550.4600635151342354'
+id: '17294956881740.9880243746228325'
 definitionId: text
 parentSlotId: '17294531645320.24085811434103732'
 styles:
   xl:
     gridItem:
       x: 13
-      y: 15
+      y: 27
       w: 11
       h: 6
     flex:
@@ -18,7 +18,7 @@ styles:
   xs:
     gridItem:
       x: 0
-      y: 21
+      y: 60
       w: 24
       h: 6
     flex:
@@ -29,14 +29,13 @@ styles:
       grow: '0'
       shrink: '0'
 properties:
-  name: text14
+  name: text17
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
-  value: Minutos target SLA -> {{state.linea_seleccionada.duracion}}
+  value: '{{state.linea_seleccionada.site_name}}'
   textStyle:
     transform: none
     styles:
       - bold
-actions: {}
 slots: []

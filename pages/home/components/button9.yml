@@ -38,4 +38,12 @@ properties:
     dataValue: primary
     withData: false
   text: Exportar
+actions:
+  buttonClick:
+    - action: '17294961821280.2494980566414069'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
 slots: []
