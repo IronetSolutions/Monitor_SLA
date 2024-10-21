@@ -7,7 +7,7 @@ styles:
       x: 16
       y: 9
       w: 8
-      h: 108
+      h: 105
     flex:
       size:
         widthValue: auto
