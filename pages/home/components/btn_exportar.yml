@@ -29,7 +29,7 @@ styles:
       grow: '0'
       shrink: '0'
 properties:
-  name: button9
+  name: btn_exportar
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
@@ -38,6 +38,7 @@ properties:
     dataValue: primary
     withData: false
   text: Exportar
+  fieldTooltip: Se exportan los datos de la TAB seleccionada
 actions:
   buttonClick:
     - action: '17294961821280.2494980566414069'
