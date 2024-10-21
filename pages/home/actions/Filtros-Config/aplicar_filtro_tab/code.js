@@ -29,6 +29,7 @@ if({{state.filtros_usuario == true}}){
 	{{state.filtros_aplicar}} = filtro_normalizado
 	//{{ui.tabs_filter.selectTab(0)}}
 	//{{actions.recarga_datos.trigger()}}
+ {{ui.card_metricas.selectView("metricas")}}
  {{actions.query_vista_interfaz.trigger()}}
  
 	return filtro_normalizado;

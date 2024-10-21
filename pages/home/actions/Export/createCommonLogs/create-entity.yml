@@ -1,0 +1,16 @@
+mode: structured
+valueByMode:
+  structured:
+    id_log:
+      value: ''
+    task_id:
+      value: APP MONITOR_SLAs
+    accion:
+      value: EXPORT MONITOR_SLAs
+    usuario:
+      value: '{{user.email}}'
+    fecha_log:
+      value: '{{moment().format(''YYYY-MM-DD HH:mm:ss'')}}'
+    data:
+      value: 'Acepta Condiciones, Token: {{actions.UserData.data[0].token_usr}}'
+  custom: ''

@@ -3,7 +3,7 @@ metadata:
   title: Monitor SLAs VANTAGE
   description: ''
   breakpoints: []
-  rendererCachingEnabled: false
+  rendererCachingEnabled: true
   skipDepsComparisonInCompilerCache: false
 appSettings:
   properties:

@@ -1,0 +1,46 @@
+id: '17294537053490.4669147862506333'
+definitionId: text
+parentSlotId: '17294531645320.24085811434103732'
+styles:
+  xl:
+    gridItem:
+      x: 13
+      y: 21
+      w: 11
+      h: 6
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 24
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+    color:
+      value: primary
+      dataValue: basic
+      withData: false
+  xs:
+    gridItem:
+      x: 0
+      y: 27
+      w: 24
+      h: 6
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 24
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: text15
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  value: SLA Result -> {{state.linea_seleccionada.SLAResult}}
+  textStyle:
+    transform: none
+    styles:
+      - bold
+actions: {}
+slots: []

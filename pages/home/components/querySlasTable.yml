@@ -5,9 +5,9 @@ styles:
   xl:
     gridItem:
       x: 0
-      y: 123
+      y: 126
       w: 24
-      h: 130
+      h: 139
     flex:
       size:
         widthValue: 500
@@ -107,7 +107,7 @@ actions:
       blockPageLoad: false
       preventDefault: false
       index: 0
-    - action: '17269034387720.8604351943955144'
+    - action: '17293233836080.7008424513595612'
       paramCode: |-
         {
           type: 'localizar_incidencia'  

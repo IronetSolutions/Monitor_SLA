@@ -1,14 +1,25 @@
-id: '17269034387720.8604351943955144'
+id: '17293233836080.7008424513595612'
 kind: workflow
 name: puntos_mapa
 nameConfigured: true
 steps:
-  - id: '17269034420920.6884572981950134'
+  - id: '17293233836080.14586933668756963'
     type: customAsyncCode
     name: code
     params:
       - type: asyncCode
         value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17293234613890.4615019338552373'
+    type: customAsyncCode
+    name: code2
+    params:
+      - type: asyncCode
+        value: ./code2.js
         valueType: interpolatedValue
         interpolationType: code
     level: 0

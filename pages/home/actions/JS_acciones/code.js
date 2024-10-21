@@ -20,7 +20,7 @@ if({{params.type == "detalle_tarea"}}){
 if({{params.type == "detalle_tarea_mapa"}}){
   //{{ui.card_modal_slas.selectView("detail_task")}}
   {{state.view_card = "detail_task"}}
-  {{state.task_id = state.incidencia_mapa.name}}
+  {{state.task_id = state.incidencia_mapa.nombre}}
   //actions.GetTask.trigger({task_id: state.incidencia_mapa.name})}}
   {{actions.GetTask.trigger({task_id: state.linea_seleccionada.task_id})}}
   {{ui.modal_detalle_incidencia.open()}}
@@ -189,18 +189,22 @@ if({{params.type == 'guardar_filtro_monitor'}}){
 if({{params.type == "slas_completados"}}){
 		if({{ui.toggle_slas_completados.value == true}}){
       {{state.slas_completados = ['activo','pausado','completado']}}
-      //{{actions.query_vista_interfaz.trigger()}} 
+      {{ui.toggle_slas_alcanzables.setValue(false)}}
+      {{state.minutos_restantes = -90000000}}
       {{actions.recarga_datos.trigger()}}
     }
   		if({{ui.toggle_slas_completados.value == false}}){
       {{state.slas_completados = ['activo','pausado']}}
-      //{{actions.query_vista_interfaz.trigger()}}  
+      {{ui.toggle_slas_alcanzables.setValue(true)}}
+      {{state.minutos_restantes = 0}}  
       {{actions.recarga_datos.trigger()}}  
     }
 }
   
 if({{params.type == "slas_alcanzables"}}){
 		if({{ui.toggle_slas_alcanzables.value == true}}){
+      {{ui.toggle_slas_completados.setValue(false)}}
+      {{state.slas_completados = ['activo','pausado']}}
       {{state.minutos_restantes = 0}}
       //{{actions.Inicio.trigger()}}
       //{{actions.query_vista_interfaz.trigger()}} 
