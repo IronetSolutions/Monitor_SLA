@@ -49,4 +49,4 @@ slots:
               - components/toggle_slas_completados.yml
               - components/toggle_slas_alcanzables.yml
               - components/customComponent_mapa.yml
-              - components/btn_exportar.yml
+              - components/button9.yml

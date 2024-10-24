@@ -1,41 +1,41 @@
-id: '17294956881740.9880243746228325'
-definitionId: text
-parentSlotId: '17294531645320.24085811434103732'
+id: '17294526768800.7054668024792368'
+definitionId: button
+parentSlotId: '2'
 styles:
   xl:
     gridItem:
-      x: 13
-      y: 27
-      w: 11
-      h: 6
+      x: 14
+      y: 113
+      w: 2
+      h: 9
     flex:
       size:
         widthValue: auto
-        heightValue: 24
+        heightValue: 36
         heightUnit: px
       grow: '0'
       shrink: '0'
   xs:
     gridItem:
       x: 0
-      y: 60
+      y: 2103
       w: 24
-      h: 6
+      h: 9
     flex:
       size:
         widthValue: auto
-        heightValue: 24
+        heightValue: 36
         heightUnit: px
       grow: '0'
       shrink: '0'
 properties:
-  name: text17
+  name: button9
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
-  value: '{{state.linea_seleccionada.site_name}}'
-  textStyle:
-    transform: none
-    styles:
-      - bold
+  status:
+    value: basic
+    dataValue: primary
+    withData: false
+  text: Exportar
 slots: []
