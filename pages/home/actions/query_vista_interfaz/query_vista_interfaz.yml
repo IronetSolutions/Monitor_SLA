@@ -41,7 +41,7 @@ steps:
         valueType: custom
         interpolationType: string
       - type: body
-        value: "{\n  \"offset\": {{ui.querySlasTable.paginationOffset}},\n  \"limit\": 2000,\n  \"order_colum\": {{ui.querySlasTable.sortColumn}},\n  \"sort\": {{ui.querySlasTable.sortDirection}},\n  \"interface_ID\": \"GetList_SLAs|91767424-0938-4a12-b858-30d3f4cfa7e1\",\n  \"status\": ['Nuevo','Asignado'],\n  \"prioridad\": [],\n  \"nombre_sla\": {{state.filtros_aplicar.nombre_sla}},\n  \"zona\": {{state.filtros_aplicar.zona}},\n  \"provincia\": {{state.filtros_aplicar.provincia}},\n\t\"minutos_restantes\": {{state.minutos_restantes}},\n\t\"estado\": {{state.slas_completados}},\n  \"user\": {{user.email}}\n}"
+        value: "{\n  \"offset\": {{ui.querySlasTable.paginationOffset}},\n  \"limit\": 2000,\n  \"order_colum\": {{ui.querySlasTable.sortColumn}},\n  \"sort\": {{ui.querySlasTable.sortDirection}},\n  \"interface_ID\": \"GetList_SLAs|91767424-0938-4a12-b858-30d3f4cfa7e1\",\n  \"status\": ['Nuevo','Asignado'],\n  \"prioridad\": [],\n  \"nombre_sla\": {{state.filtros_aplicar.nombre_sla}},\n  \"zona\": {{state.filtros_aplicar.zona}},\n  \"provincia\": {{state.filtros_aplicar.provincia}},\n\t\"minutos_restantes\": {{state.minutos_restantes}},\n\t\"estado\": {{state.slas_completados}},\n  \"user\": {{user.email}},\n}"
         valueType: interpolatedValue
         interpolationType: code
       - type: structuredBody

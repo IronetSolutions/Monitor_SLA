@@ -203,8 +203,6 @@ if({{params.type == "slas_completados"}}){
   
 if({{params.type == "slas_alcanzables"}}){
 		if({{ui.toggle_slas_alcanzables.value == true}}){
-      {{ui.toggle_slas_completados.setValue(false)}}
-      {{state.slas_completados = ['activo','pausado']}}
       {{state.minutos_restantes = 0}}
       //{{actions.Inicio.trigger()}}
       //{{actions.query_vista_interfaz.trigger()}} 
